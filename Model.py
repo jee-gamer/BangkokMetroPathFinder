@@ -24,6 +24,9 @@ class TrainData:
     df = df.drop("Column1", axis=1)
     df = df.drop("name", axis=1)
 
+    row_index = df.index[df['lineNameEng'] == 'CEN'][0]
+    df.at[row_index, 'lineNameEng'] = "Sukhumvit Line"
+
     station_list = list(df['nameEng'])
 
     station_id = list(df['stationId'])

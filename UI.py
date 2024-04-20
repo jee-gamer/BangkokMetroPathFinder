@@ -69,8 +69,6 @@ class TrainUI(tk.Tk):
         fig, ax = plt.subplots(figsize=(10, 10))
         df = self.data.df.copy()
 
-        df['lineNameEng']['CEN'] = "Sukhumvit Line"
-
         for count, line in enumerate(self.all_line):
             new_df = df[df['lineNameEng'] == line]
             sns.scatterplot(new_df, x='geoLng', y='geoLat',
@@ -84,9 +82,6 @@ class TrainUI(tk.Tk):
         canvas.draw()
 
         return canvas
-
-    def create_path(self, frame):
-        pass
 
     def load_units(self, station_list):
         """Load metro station into the comboboxes."""
@@ -110,8 +105,8 @@ class TrainUI(tk.Tk):
         df = self.data.df.copy()
         print("from", start_id, "to", final_id)
         # path_df = df[df['stationId'].isin(path)]
-        print('stationID')
-        print(list(df['stationId']))
+        # print('stationID')
+        # print(list(df['stationId']))
         print('PATH')
         print(path)
 
@@ -123,8 +118,6 @@ class TrainUI(tk.Tk):
 
         sns.scatterplot(grey_station_df, x='geoLng', y='geoLat',
                         color='whitesmoke')
-
-        df['lineNameEng']['CEN'] = "Sukhumvit Line"
 
         for count, line in enumerate(self.all_line):
             new_df = df[
