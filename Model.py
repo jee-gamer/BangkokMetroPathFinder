@@ -109,6 +109,9 @@ class TrainData:
     adj['G1'].append('S7')
     adj['S7'].append('G1')
 
+    adj['BL01'].extend(['BL33', 'BL32'])
+    adj['BL33'].append('BL01')
+    adj['BL32'].append('BL01')
     # print(adj)
 
     # now the adj list is ready
