@@ -2,7 +2,7 @@
 Simple Metro Path Finder that uses Breadth-First Search.
 
 # How to use
-1. Download this whole repository
+1. Clone this repository using your python program.
 2. run the "main.py"
 3. Choose the starting station and destination station.
 4. see the path, done.
